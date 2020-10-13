@@ -1,0 +1,50 @@
+.portfolio
+  display: grid 
+  grid-template-columns: repeat(4, 1fr)
+  grid-gap: 5px 
+  padding: 5px 
+  & .block 
+    width: 100%
+    min-height: calc(33.333vh - 10px)
+    position: relative
+    display: grid 
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: rgba(#000000,.5)
+      transition: .3s linear 
+    &:hover::before 
+      background: rgba(#000000,.8)
+    &:hover p 
+      color: #f0650d
+    & a 
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+    & img 
+      width: 100%
+      height: 100%
+      object-fit: cover
+    & p 
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      +ral_bold 
+      color: #ffffff
+      transition: .3s linear 
+    &:nth-child(1)
+      grid-column: 1/3
+    &:nth-child(5)
+      grid-column: 2/4
+    &:nth-child(6)
+      grid-column: 4
+      grid-row: 2/4
+
+

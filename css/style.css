@@ -113,6 +113,107 @@ body {
   background: #f0650d;
 }
 
+.portfolio {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  padding: 5px;
+}
+
+.portfolio .block {
+  width: 100%;
+  min-height: calc(33.333vh - 10px);
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+}
+
+.portfolio .block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.portfolio .block:hover::before {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.portfolio .block:hover p {
+  color: #f0650d;
+}
+
+.portfolio .block a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio .block img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.portfolio .block p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: 'Raleway-Bold';
+  color: #ffffff;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.portfolio .block:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+.portfolio .block:nth-child(5) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+}
+
+.portfolio .block:nth-child(6) {
+  -ms-grid-column: 4;
+  grid-column: 4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2/4;
+}
+
+@media screen and (max-width: 1040px) {
+  .portfolio {
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .portfolio .block:nth-child(1) {
+    grid-column: auto;
+  }
+  .portfolio .block:nth-child(5) {
+    grid-column: auto;
+  }
+  .portfolio .block:nth-child(6) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
 @media screen and (max-width: 470px) {
   .header .header-wrap h1 {
     font-size: 40px;

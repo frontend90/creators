@@ -1,3 +1,14 @@
+@media screen and ( max-width: 1040px )
+  .portfolio
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    & .block
+      &:nth-child(1)
+         grid-column: auto
+      &:nth-child(5)
+        grid-column: auto
+      &:nth-child(6)
+        grid-column: auto
+        grid-row: auto
 @media screen and ( max-width: 470px )
   .header 
     & .header-wrap 
