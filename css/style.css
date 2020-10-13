@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'fa-solid-900';
+  src: url("../fonts/fa-solid-900.ttf");
+}
+
+@font-face {
+  font-family: 'fa-brands-400';
+  src: url("../fonts/fa-brands-400.ttf");
+}
+
+@font-face {
+  font-family: 'Helvetica-Oblique';
+  src: url("../fonts/Helvetica-Oblique.ttf");
+}
+
+@font-face {
+  font-family: 'Helvetica-Neue';
+  src: url("../fonts/Helvetica-Neue.ttf");
+}
+
+@font-face {
+  font-family: 'Intro';
+  src: url("../fonts/Intro.otf");
+}
+
+@font-face {
+  font-family: 'Raleway-Bold';
+  src: url("../fonts/Raleway-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Raleway-ExtraBold';
+  src: url("../fonts/Raleway-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: 'Raleway-Regular';
+  src: url("../fonts/Raleway-Regular.ttf");
+}
+
+body {
+  font-family: 'Raleway-Regular';
+  color: #333333;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.header {
+  background: url(../img/header/bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.header .header-wrap {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+.header .header-wrap h1 {
+  font-family: 'Intro';
+  color: #ffffff;
+  font-size: 60px;
+}
+
+.header .header-wrap .btn {
+  margin-top: 50px;
+}
+
+.header .header-wrap .btn button {
+  width: 200px;
+  height: 50px;
+  background: #4b5a65;
+  font-family: 'Raleway-ExtraBold';
+  color: #ffffff;
+  font-size: 20px;
+  margin-left: 30px;
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
+}
+
+.header .header-wrap .btn button:first-of-type {
+  margin-left: 0;
+}
+
+.header .header-wrap .btn button:hover {
+  background: #f0650d;
+}
+
+@media screen and (max-width: 470px) {
+  .header .header-wrap h1 {
+    font-size: 40px;
+  }
+  .header .header-wrap .btn {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    justify-items: center;
+    margin-top: 20px;
+  }
+  .header .header-wrap .btn button {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
