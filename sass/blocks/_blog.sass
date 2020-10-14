@@ -1,0 +1,32 @@
+.blog
+  padding: 80px 0 110px 0 
+  & h2 
+    color: #293a43
+    +ral_extra 
+    font-size: 34px 
+  & .blog-wrap
+    margin-top: 60px 
+    display: grid 
+    grid-template-columns: repeat(4, 1fr)
+    grid-gap: 20px 
+    & .block 
+      display: grid 
+      background: #f7f7f7
+      &:nth-child(3)
+        grid-column: 3/5
+      &:nth-child(4)
+        grid-column: 1/3
+      & img 
+        width: 100%
+        height: 270px 
+        object-fit: cover 
+      & .content 
+        padding: 35px 15px 25px 20px 
+        text-align: center
+        & h5 
+          +ral_bold 
+          color: #666666
+          font-size: 18px 
+        & p 
+          margin-top: 30px 
+          line-height: 26px 
